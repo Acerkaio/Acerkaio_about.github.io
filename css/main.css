@@ -1,0 +1,427 @@
+:root {
+            --white: #f3fcff;
+            --gray: #6c757d;
+            --red: #b81010;
+            --blue: #3260ecd2;
+            --green: #1bb31b;
+            --shadow: 48505f66;
+        }
+
+        @keyframes opacity-end {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+
+                opacity: 0;
+            }
+        }
+
+        @keyframes lazy-end {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes app-start {
+            0% {
+                background-color: #f5f9ff;
+                backdrop-filter: blur(0px);
+            }
+
+            100% {
+                background-color: #ffffff00;
+            }
+        }
+
+        @keyframes lazy-ani {
+            0% {
+                height: 60px;
+            }
+
+            50% {
+                height: 110px;
+            }
+
+            100% {
+                height: 60px;
+            }
+        }
+
+        @keyframes backflon {
+            0% {
+                backdrop-filter: blur(0px);
+            }
+
+            100% {
+                backdrop-filter: blur(15px);
+            }
+        }
+
+        @keyframes backfloff {
+            0% {
+                backdrop-filter: blur(15px);
+            }
+
+            100% {
+                backdrop-filter: blur(0px);
+            }
+        }
+
+        @font-face {
+            font-family: "Heiti";
+            src: url(../tff/FangZhengHeiTiJianTi-1.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Ubuntu";
+            src: url(../tff/Ubuntu-Mono.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background: url(https://ttttt.link/img/bg/d-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #main {
+            animation: app-start 1s ease-in;
+            display: flex;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            align-items: center;
+        }
+
+        #lazy-all {
+            z-index: 999;
+            display: flex;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            align-items: center;
+        }
+
+
+
+        .lazy {
+            display: none;
+            z-index: 999;
+            width: 150px;
+            height: 150px;
+            background-color: rgba(248, 248, 255, 0.884);
+            box-shadow: 3px 3px 10px rgba(72, 80, 95, 0.1),
+                -3px -3px 10px rgba(248, 248, 255, 0.884);
+            backdrop-filter: blur(20px);
+            margin: 0 auto;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+        #red {
+            display: inline-block;
+            height: 60px;
+            width: 20px;
+            margin: auto;
+            margin-left: 30px;
+            background-color: #ff0000ab;
+        }
+
+        #blue {
+            display: inline-block;
+            height: 60px;
+            width: 20px;
+            margin: auto;
+            background-color: #4882d8ec;
+        }
+
+        #green {
+            display: inline-block;
+            height: 60px;
+            width: 20px;
+            margin: auto;
+            margin-right: 30px;
+            background-color: #1bb31bc7;
+        }
+
+        .card-main {
+            border-radius: 0px 7px 7px 0px;
+            transition: all .5s ease-out;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            height: 410px;
+            width: 1070px;
+            background-color: rgb(255, 255, 255, .97);
+            box-shadow: 0px 2prgba(255, 255, 255, 0.906)ba(72, 80, 95, 0.2);
+        }
+
+        .card-main:hover {
+            box-shadow: 0px 3px 15px #48505f66;
+        }
+
+        .avatar {
+            height: 410px;
+            width: 360px;
+            display: inline-block;
+            background-image: url(https://pic.imgdb.cn/item/63c24defbe43e0d30ef028d9.webp);
+            background-position: top;
+            background-size: cover;
+        }
+
+        .lg-card {
+            width: 710px;
+            text-align: left;
+            display: block;
+        }
+
+        .card-tit {
+            font-weight: 500;
+        }
+
+        .card-tit.tit1 {
+            font-size: 35.5px;
+            margin-left: 56px;
+            margin-top: 48px;
+            text-shadow: 0px 1px 12px rgba(72, 80, 95, 0.3);
+        }
+
+        .information {
+            color: var(--gray);
+            font-size: 17.5px;
+            margin-left: 60.7px;
+            margin-top: -7px;
+        }
+
+        .find-me {
+            color: var(--gray);
+            font-size: 18.5px;
+            margin-left: 60.7px;
+            margin-top: 24px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-left: 46.7px;
+            margin-top: 3px;
+        }
+
+        .row-botton {
+            transition: all .3s ease;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            padding-left: 76px;
+            padding-right: 76px;
+            margin-left: 0px;
+            margin-right: 0px;
+            font-size: 17px;
+            display: inline-block;
+            font-family: 'Ubuntu';
+            font-weight: 300;
+            color: var(--white);
+            border: 0;
+        }
+
+        .row-botton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 3px 12px rgba(72, 80, 95, 0.4);
+            opacity: .9;
+        }
+
+        #Luogu {
+            background-color: var(--blue);
+        }
+
+        #Blog {
+            background-color: var(--green);
+        }
+
+        #Github {
+            background-color: var(--gray);
+        }
+
+        .footer {
+            margin-left: 60.7px;
+            margin-top: 90px;
+            color: var(--gray);
+            font-size: 10px;
+        }
+
+        .footer>a {
+            color: var(--blue);
+        }
+
+        @media screen and (max-width: 1100px) {
+            .card-main {
+                height: 307.5px;
+                width: 802.5px;
+            }
+
+            .avatar {
+                height: 307.5px;
+                width: 270px;
+            }
+
+            .lg-card {
+                width: 532.5px;
+            }
+
+            .card-tit.tit1 {
+                font-size: 26.625px;
+                margin-left: 42px;
+                margin-top: 36px;
+            }
+
+            .information {
+                font-size: 13.125px;
+                margin-left: 45.525px;
+                margin-top: -5.25px;
+            }
+
+            .find-me {
+                font-size: 13.875px;
+                margin-left: 45.525px;
+                margin-top: 18px;
+            }
+
+            .row {
+                display: block;
+                margin-left: 35.025px;
+                margin-top: 2.25px;
+            }
+
+            .row-botton {
+                padding-top: 10.5px;
+                padding-bottom: 10.5px;
+                padding-left: 57px;
+                padding-right: 57px;
+                margin-left: 0px;
+                margin-right: 0px;
+                font-size: 12.75px;
+            }
+
+            .row-botton:hover {
+                transform: translateY(-1.5px);
+            }
+
+            .footer {
+                margin-left: 45.525px;
+                margin-top: 67.5px;
+                font-size: 7.5px;
+            }
+        }
+
+        /*pad*/
+        @media screen and (max-width: 1000px) and (min-height: 1300px) {
+            
+            .card-main {
+                display: block;
+                height: auto !important;
+            }
+
+            .avatar {
+                height: 570px;
+                width: 100% !important;
+            }
+
+            .lg-card {
+                width: 100% !important;
+            }
+
+            .card-tit.tit1 {
+                font-size: 35.5px !important;
+            }
+
+            .information {
+                font-size: 17.5px !important;
+            }
+
+            .find-me {
+                font-size: 18.5px !important;
+            }
+            .row {
+
+                display: block !important;
+                margin-right: 35.025px;
+            }
+            .row > a {
+                text-decoration: none;
+            }
+            .row-botton {
+                padding-top: 17px;
+                padding-bottom: 17px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 12px;
+                width: 100% !important;
+                font-size: 17px;
+                display: block !important;
+                
+            }
+            .footer {
+                margin-bottom: 20px;
+            }
+
+            
+        }
+
+        /*phone*/
+        @media screen and (min-height: 1430px) and (max-width: 980px) {
+            #main {
+                position: static;
+            }
+            .card-main {
+                width: 100%;
+                min-height: 100vh;
+            }
+
+            .avatar {
+                height: 800px !important;
+                width: 100% !important;
+            }
+
+            .lg-card {
+                width: 100% !important;
+            }
+
+            .card-tit.tit1 {
+                font-size: 75.5px !important;
+                text-shadow: none;
+            }
+
+            .information {
+                font-size: 32.5px !important;
+            }
+
+            .find-me {
+                font-size: 35.5px !important;
+            }
+
+            .row-botton {
+                padding-top: 35px !important;
+                padding-bottom: 35px !important;
+                font-size: 38.5px !important;
+                margin-top: 25px;
+            }
+            .footer {
+                font-size: 30px;
+            }
+        }
