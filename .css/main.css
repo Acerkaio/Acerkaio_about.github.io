@@ -387,7 +387,7 @@
         }
 
         /*phone*/
-        @media screen and (min-height: 1700px) and (max-width: 980px) {
+        @media screen and (min-height: 1700px) and (max-width: 1080px) {
             .card-main {
                 width: 100%;
             }
